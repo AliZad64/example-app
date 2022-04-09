@@ -94,7 +94,7 @@ class EmployeeController extends Controller
 }
         }
         catch (Exception $e) {
-            return response('enter text file or text file with json array', 400);
+            return response( ["message" => "enter text file or text file with json array"] , 400);
         }
         return EmployeeResource::collection(employee::all());
     }
